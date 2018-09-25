@@ -238,7 +238,7 @@ var App = new Framework7({
     //pushState: true,       
     allowDuplicateUrls: true,    
     sortable: false,    
-    modalTitle: 'Ubuntu Loc8',
+    modalTitle: 'Ubuntu QL8',
     precompileTemplates: true,
     template7Pages: true,
     onAjaxStart: function(xhr){
@@ -259,7 +259,7 @@ var mainView = App.addView('.view-main', {
 });
 
 var AppDetails = {
-    name: 'Ubuntu-Loc8-app',
+    name: 'Ubuntu-ql8-app',
     code: 24,
     supportCode: 29,
 };

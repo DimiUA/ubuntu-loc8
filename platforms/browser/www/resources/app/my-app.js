@@ -150,9 +150,9 @@ function setupPush(){
 }
 
 function onAppPause(){ 
-    if ($hub) {
+    /*if ($hub) {
         $hub.stop();
-    }
+    }*/
 } 
 function onAppResume(){    
     if (localStorage.ACCOUNT && localStorage.PASSWORD) {
@@ -160,9 +160,9 @@ function onAppResume(){
         getNewData();
     }
    
-    if ($hub) {
+   /* if ($hub) {
         $hub.start();
-    } 
+    }*/ 
 }  
 
  
@@ -178,7 +178,7 @@ function backFix(event){
     } 
 }
 
-function webSockConnect(){ 
+/*function webSockConnect(){ 
     var MinorToken = getUserinfo().MinorToken;
     var deviceToken = !localStorage.PUSH_DEVICE_TOKEN ? '123' : localStorage.PUSH_DEVICE_TOKEN;
     $hub = hubHelper({ url :"http://api.Quikdata.co:8088/",
@@ -193,9 +193,9 @@ function webSockConnect(){
         },
         receiveNotice: function(msg){
             
-            /*if (!inBrowser) {                
+            if (!inBrowser) {                
                 plus.push.clear();
-            }  */          
+            }            
             console.log(msg);
             var objMsg = isJsonString(msg);      
             if ( objMsg ) {
@@ -210,24 +210,15 @@ function webSockConnect(){
                 if (deviceType == "web") {
                     setNotificationList(all_msg);
                 }                
-                getNewNotifications();
-            
-                /*var page = App.getCurrentView().activePage;        
-                if ( page && page.name != "notification" ) {
-                    $$('.notification_button').addClass('new_not');
-                    showMsgNotification(all_msg);
-                    
-                }else if (deviceType == "web"){
-                	var messageList = setCurrentTimezone(all_msg);
-                    showNotification(messageList);
-                }*/
+                getNewNotifications();            
+               
             }
                 
         }
     });
             
     $hub.start();
-}
+}*/
 
 // Initialize your app
 var App = new Framework7({
@@ -238,7 +229,7 @@ var App = new Framework7({
     //pushState: true,       
     allowDuplicateUrls: true,    
     sortable: false,    
-    modalTitle: 'Ubuntu Loc8',
+    modalTitle: 'Ubuntu QL8',
     precompileTemplates: true,
     template7Pages: true,
     onAjaxStart: function(xhr){
@@ -259,7 +250,7 @@ var mainView = App.addView('.view-main', {
 });
 
 var AppDetails = {
-    name: 'Ubuntu-Loc8-app',
+    name: 'Ubuntu-ql8-app',
     code: 24,
     supportCode: 29,
 };
@@ -1857,9 +1848,9 @@ function clearUserInfo(){
     
     
     localStorage.clear();
-    if ($hub) {
+    /*if ($hub) {
         $hub.stop();        
-    }  
+    }*/  
     if (updateAssetsPosInfoTimer) {
         clearInterval(updateAssetsPosInfoTimer);
     }
@@ -1956,7 +1947,7 @@ function login(){
                 updateUserCredits(result.Data.UserInfo.SMSTimes);
                 updateMenuUserData(result.Data.UserInfo);
                                                  
-                webSockConnect();
+                /*webSockConnect();*/
                 getNewNotifications();
                 App.closeModal();                 
 

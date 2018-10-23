@@ -73,7 +73,7 @@
             <div class="tracking-interval-hint bg-dealer color-white">
                 <p>{{@global.LANGUAGE.ASSET_TRACKING_INTERVAL_MSG06}} <span class="trackingInterval">12 {{@global.LANGUAGE.ASSET_TRACKING_INTERVAL_MSG10}}</span> </p>
                 <div class="tracking-interval-hint-devider"></div>
-                <p class="fs-18"><b>$ <span class="trackingCost">0 {{@global.LANGUAGE.ASSET_TRACKING_INTERVAL_MSG03}}</span> </b></p>
+                <p class="fs-18"><b>$ <span class="trackingCost">{{Cost}} {{@global.LANGUAGE.ASSET_TRACKING_INTERVAL_MSG03}}</span> </b></p>
             </div>
             <div class="range-slider">
                 <input type="range" name="rangeInput" min="0" max="4" value="0" step="1">
@@ -85,7 +85,7 @@
                 <div class="bottom-indicator bottom-indicator-3 col-10 text-a-c"><i class="icon-ti-dot icon-other-dot"></i><div>1/30{{@global.LANGUAGE.ASSET_TRACKING_INTERVAL_MSG04}}</div></div>
                 <div class="bottom-indicator bottom-indicator-4 col-20 text-a-r"><i class="icon-ti-dot icon-other-dot"></i><div>1/1{{@global.LANGUAGE.ASSET_TRACKING_INTERVAL_MSG04}}</div></div>
             </div>
-            <a href="#" class="link button button-red color-white upgradeNowButton disabled fs-18" data-paylink="" data-payplancode="">{{@global.LANGUAGE.ASSET_TRACKING_INTERVAL_MSG08}}</a>
+            <a href="#" class="link button button-red color-white upgradeNowButton disabled fs-18" data-paylink="{{PayLink}}" data-payplancode="{{PayPlanCode}}">{{@global.LANGUAGE.ASSET_TRACKING_INTERVAL_MSG08}}</a>
         </div>
 
     </div>

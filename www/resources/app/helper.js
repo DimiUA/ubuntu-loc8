@@ -27,81 +27,145 @@ Protocol = {
     TrackingInterval: [
         {
             '1':{
-                'cost':0 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG03,  //month
-                'button':'',
+                AUS: {
+                    cost: 5.50 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG03,  //month
+                    button: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LT53RSYE5B4A2',
+                    payPlanCode: 'LT53RSYE5B4A2',
+                },
+                OTHER: {
+                    cost: 0.00 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG03,  //month
+                    button: '',
+                    payPlanCode: '',
+                },                    
             },
             '2':{
-                'cost':0 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG12,    // year
-                'button':'',
+                AUS: {
+                    cost: 66.00 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG12,    // year
+                    button: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=4P2ZLZU7KYZ8G',
+                    payPlanCode: '4P2ZLZU7KYZ8G',
+                },
+                OTHER: {
+                    cost: 0.00 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG12,    // year
+                    button: '',
+                    payPlanCode: '',
+                },
             },      
-            'intervalDisplayed': '12'+' '+LANGUAGE.ASSET_TRACKING_INTERVAL_MSG10,
-            'interval':720,        
+            intervalDisplayed: '12'+' '+LANGUAGE.ASSET_TRACKING_INTERVAL_MSG10,
+            interval: 720,
         },
         {
             '1':{
-                'cost':2 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG03,
-                'button':'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2WHU48K4XUFSS',
-                'payPlanCode':'2WHU48K4XUFSS'
-                //'button':'https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=URYQFYGFGKB38',
+                AUS: {
+                    cost: 8.00 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG03,
+                    button: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MT2SUYZ35R7GL',
+                    payPlanCode: '2WHU48K4XUFSS'                   
+                },
+                OTHER: {
+                    cost: 2.00 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG03,
+                    button: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=2WHU48K4XUFSS',
+                    payPlanCode: '2WHU48K4XUFSS'                    
+                },
             },
             '2':{
-                'cost':20 +' '+LANGUAGE.ASSET_TRACKING_INTERVAL_MSG12,
-                'button':'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=L9S33552S62Q6',
-                //'button':'https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZLMAGFX4M4WAG',
-                'payPlanCode':'L9S33552S62Q6'
+                AUS: {
+                    cost: 96.00 +' '+LANGUAGE.ASSET_TRACKING_INTERVAL_MSG12,
+                    button: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LQYYAZFFYW9D6',                    
+                    payPlanCode: 'L9S33552S62Q6'
+                },
+                OTHER: {
+                    cost: 20.00 +' '+LANGUAGE.ASSET_TRACKING_INTERVAL_MSG12,
+                    button: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=L9S33552S62Q6',                   
+                    payPlanCode: 'L9S33552S62Q6'
+                },
                 
             },      
-            'intervalDisplayed': '6'+' '+LANGUAGE.ASSET_TRACKING_INTERVAL_MSG10,
-            'interval':360,
+            intervalDisplayed: '6'+' '+LANGUAGE.ASSET_TRACKING_INTERVAL_MSG10,
+            interval: 360,
         },  
         {       
             '1':{
-                'cost':5 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG03,
-                'button':'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FHWEQYJU4J7PG',
-                //'button':'https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GABJCHTWZMEUG',
-                'payPlanCode':'FHWEQYJU4J7PG'
+                AUS: {
+                    cost: 12.00 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG03,
+                    button: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=ZPUNBTBMQU594',                    
+                    payPlanCode: 'FHWEQYJU4J7PG'
+                },
+                OTHER: {
+                    cost: 5.00 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG03,
+                    button: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=FHWEQYJU4J7PG',                    
+                    payPlanCode: 'FHWEQYJU4J7PG'
+                },
             },
             '2':{
-                'cost':50 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG12,
-                'button':'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KHH32FAY82TTC',
-                //'button':'https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VFRJHUEXT776C',
-                'payPlanCode':'KHH32FAY82TTC'
+                AUS: {
+                    cost: 144.00 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG12,
+                    button: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W7ZNFJ976H7CL',                    
+                    payPlanCode: 'KHH32FAY82TTC'
+                },
+                OTHER: {
+                    cost: 50.00 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG12,
+                    button: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=KHH32FAY82TTC',                    
+                    payPlanCode: 'KHH32FAY82TTC'
+                },
             },
-            'intervalDisplayed': '1'+' '+LANGUAGE.ASSET_TRACKING_INTERVAL_MSG09,
-            'interval':60,        
+            intervalDisplayed: '1'+' '+LANGUAGE.ASSET_TRACKING_INTERVAL_MSG09,
+            interval: 60,        
         },  
         {
             '1':{
-                'cost':10 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG03,
-                'button':'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=S52J34JS89MTU',
-                //'button':'https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=T28DVT84Q6PUW',
-                'payPlanCode':'S52J34JS89MTU'
+                AUS: {
+                    cost: 16.50 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG03,
+                    button: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=VMDPGMUUAFTFC',                   
+                    payPlanCode: 'S52J34JS89MTU'
+                },
+                OTHER: {
+                    cost: 10.00 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG03,
+                    button: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=S52J34JS89MTU',                    
+                    payPlanCode: 'S52J34JS89MTU'
+                },
             },
             '2':{
-                'cost':100 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG12,
-                'button':'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8ZRAGALKV27D2',
-                //'button':'https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=MU484B8E7Y6DC',
-                'payPlanCode':'8ZRAGALKV27D2'
+                AUS: {
+                    cost: 198.00 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG12,
+                    button: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=BDR3HC6Z4AX9U',                    
+                    payPlanCode: '8ZRAGALKV27D2'
+                },
+                OTHER: {
+                    cost: 100.00 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG12,
+                    button: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=8ZRAGALKV27D2',
+                    payPlanCode: '8ZRAGALKV27D2'
+                },
             },      
-            'intervalDisplayed': '30'+' '+LANGUAGE.ASSET_TRACKING_INTERVAL_MSG07,
-            'interval':30,        
+            intervalDisplayed: '30'+' '+LANGUAGE.ASSET_TRACKING_INTERVAL_MSG07,
+            interval: 30,        
         },
         {
             '1':{
-                'cost':20 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG03,
-                'button':'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W4LJDLLA4DNHU',
-                //'button':'https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GABJCHTWZMEUG',
-                'payPlanCode':'W4LJDLLA4DNHU'
+                AUS: {
+                    cost: 19.00 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG03,
+                    button: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=LB6GD39K98M6U',                    
+                    payPlanCode: 'W4LJDLLA4DNHU'
+                },
+                OTHER: {
+                    cost: 20.00 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG03,
+                    button: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W4LJDLLA4DNHU',                    
+                    payPlanCode: 'W4LJDLLA4DNHU'
+                },
             },
             '2':{
-                'cost':200 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG12,
-                'button':'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W7N6LKCNNLT6S',
-                //'button':'https://www.sandbox.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=J4UCDGP5N5SZY',
-                'payPlanCode':'W7N6LKCNNLT6S'
+                AUS: {
+                    cost: 228.00 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG12,
+                    button: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=3HDP3UANR3KBQ',                    
+                    payPlanCode: 'W7N6LKCNNLT6S'
+                },
+                OTHER: {
+                    cost: 200.00 + ' ' + LANGUAGE.ASSET_TRACKING_INTERVAL_MSG12,
+                    button: 'https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=W7N6LKCNNLT6S',                    
+                    payPlanCode: 'W7N6LKCNNLT6S'
+                },
 
             },      
-            'intervalDisplayed': '1'+' '+LANGUAGE.ASSET_TRACKING_INTERVAL_MSG11,
-            'interval':1,        
+            intervalDisplayed: '1'+' '+LANGUAGE.ASSET_TRACKING_INTERVAL_MSG11,
+            interval: 1,        
         },
     ],
     PositionTypes: {

@@ -218,7 +218,6 @@ window.LanguagePackages= {
 		"ASSET_TRACK_MSG12": "Update",
 		"ASSET_TRACK_MSG13": "Last Update",	
 		"ASSET_TRACK_MSG14": "sec",	
-		"ASSET_TRACK_MSG16": "Go To",
 
 		"ASSET_EDIT_MSG00": "Tag",
 		"ASSET_EDIT_MSG01": "Name",

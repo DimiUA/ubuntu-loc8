@@ -147,6 +147,7 @@ window.LanguagePackages= {
 		"ALARM_MSG22": "Negative Input",
 		"ALARM_MSG23": "Speed Alert",
 		"ALARM_MSG24": "Turn on/off all",
+		"ALARM_MSG25": "Alarm Input",
 
 		"ASSET_MSG00": "Status",
 		"ASSET_MSG01": "Position",
@@ -218,6 +219,7 @@ window.LanguagePackages= {
 		"ASSET_TRACK_MSG12": "Update",
 		"ASSET_TRACK_MSG13": "Last Update",	
 		"ASSET_TRACK_MSG14": "sec",	
+		"ASSET_TRACK_MSG16": "Go To",
 
 		"ASSET_EDIT_MSG00": "Tag",
 		"ASSET_EDIT_MSG01": "Name",

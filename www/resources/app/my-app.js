@@ -1799,7 +1799,7 @@ App.onPageInit('alarms.assets', function (page) {
         }else{
             App.addNotification({
                 hold: 3000,
-                message: LANGUAGE.PROMPT_MSG029                                   
+                message: LANGUAGE.PROMPT_MSG049                                   
             });
         }
         

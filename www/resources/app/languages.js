@@ -85,6 +85,8 @@ window.LanguagePackages= {
 		"PROMPT_MSG050": "Access restricted",
 		"PROMPT_MSG051": "Demo accounts has restricted access",
 
+		"PROMPT_MSG054": "Сommand sent, your device will reply shortly.",
+
 		"LOGIN_MSG01": "The login(email) or password you entered is incorrect.",
 		"LOGIN_MSG02": "Login Name / Email",
 		"LOGIN_MSG03": "Password",
@@ -139,7 +141,7 @@ window.LanguagePackages= {
 		"ALARM_MSG14": "No Driver Alert",
 		"ALARM_MSG15": "Input 1 Alarm",
 		"ALARM_MSG16": "Input 1 Low Alarm",
-		"ALARM_MSG17": "Low Internal Battery",
+		"ALARM_MSG17": "Low Battery",
 		"ALARM_MSG18": "Main Power Disconnection",
 		"ALARM_MSG19": "SOS Duress",
 		"ALARM_MSG20": "Positive Input",

@@ -1218,7 +1218,7 @@ App.onPageInit('asset.alarm', function (page) {
     var alarm = $$(page.container).find('input[name = "checkbox-alarm"]'); 
     var allCheckboxesLabel = $$(page.container).find('label.item-content');
     var allCheckboxes = allCheckboxesLabel.find('input');
-    var alarmFields = ['geolock','tilt','impact','power','input','accOff','accOn'];  
+    var alarmFields = ['geolock','tilt','impact','power','input','accOff','accOn','lowBattery'];  
     
 
     alarm.on('change', function(e) { 
@@ -1813,7 +1813,7 @@ App.onPageInit('alarms.select', function (page) {
     var allCheckboxesLabel = $$(page.container).find('label.item-content');
     var allCheckboxes = allCheckboxesLabel.find('input');
     var assets = $$(page.container).find('input[name="Assets"]').val();
-    var alarmFields = ['geolock','tilt','impact','power','input','accOff','accOn'];  
+    var alarmFields = ['geolock','tilt','impact','power','input','accOff','accOn','lowBattery'];  
 
     alarm.on('change', function(e) { 
         if( $$(this).prop('checked') ){
@@ -2518,6 +2518,8 @@ function requestAssetPosition(){
             		showNoCreditMessage();
             	}                
                 
+            }else if(result.ERROR == "LOCKED"){
+                showModalMessage(TargetAsset.IMEI, LANGUAGE.PROMPT_MSG054);
             }else{                      
                 App.addNotification({
                     hold: 2000,
@@ -2549,6 +2551,8 @@ function requestAssetStatus(){
             	} else{
             		showNoCreditMessage();
             	}     
+            }else if(result.ERROR == "LOCKED"){
+                showModalMessage(TargetAsset.IMEI, LANGUAGE.PROMPT_MSG054);
             }else{ 
                 App.addNotification({
                     hold: 2000,
@@ -2834,6 +2838,21 @@ function showRestrictedAccessMessage(){
     });    
 }
 
+function showModalMessage(header, body){
+    var modalTex = '<div class="color-red custom-modal-title">'+ header +'</div>' +
+                    '<div class="custom-modal-text">'+ body +'</div>';                            
+    App.modal({
+           title: '<div class="custom-modal-logo-wrapper"><img class="custom-modal-logo" src="resources/images/logo_dark.png" alt=""/></div>',
+            text: modalTex,                                
+         buttons: [
+            {
+                text: LANGUAGE.COM_MSG38
+            },
+            
+        ]
+    });          
+}
+
 function loadPageAssetAlarm(){
     var assetList = getAssetList();
     var asset = assetList[TargetAsset.IMEI];
@@ -2871,6 +2890,10 @@ function loadPageAssetAlarm(){
         accOn: {
             state: true,
             val: 32768,
+        },
+        lowBattery: {
+            state: true,
+            val: 512,
         }
     };  
     if (assetAlarmVal) {
@@ -2879,7 +2902,7 @@ function loadPageAssetAlarm(){
                 alarms[key].state = false;
             }            
         });
-        if (assetAlarmVal == 247044) {
+        if (assetAlarmVal == 247556) {
             alarms.alarm.state = false;
         }
         
@@ -2895,7 +2918,8 @@ function loadPageAssetAlarm(){
             Power: alarms.power.state,   
             Input: alarms.input.state,
             AccOff: alarms.accOff.state,
-            AccOn: alarms.accOn.state,                 
+            AccOn: alarms.accOn.state, 
+            LowBattery: alarms.lowBattery.state,                
         }
     });
 }
@@ -3259,7 +3283,7 @@ function loadPageLocation(params){
     	time : '',
     };
 
-    if (params && parseFloat(params.lat) !== 0 && parseFloat(params.lng) !== 0 || params && parseFloat(params.Lat) !== 0 && parseFloat(params.Lng) !== 0 || !params && parseFloat(asset.posInfo.lat) !== 0 && parseFloat(asset.posInfo.lng) !== 0) {
+    if (params && parseFloat(params.lat) !== 0 && parseFloat(params.lng) !== 0 || params && parseFloat(params.Lat) !== 0 && parseFloat(params.Lng) !== 0 || !params && asset && parseFloat(asset.posInfo.lat) !== 0 && parseFloat(asset.posInfo.lng) !== 0) {
     	if (params) {
     		if (params.Lat && params.Lng) {
     			window.PosMarker[TargetAsset.IMEI] = L.marker([params.Lat, params.Lng], {icon: Protocol.MarkerIcon[0]}); 
